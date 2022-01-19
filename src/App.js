@@ -87,7 +87,8 @@ function App() {
         <p className='bottomtext center mw'>0.000 Cake + 0.000000 DON</p>
 
         <p className='hide mw'>
-          <p>Hide Details</p>
+          {showDetails && <p onClick={() => setShowDetails(!showDetails)}>Hide Details</p>}
+          {!showDetails && <p onClick={() => setShowDetails(!showDetails)}>Show Details</p>}
           <span>
             <img src={showDetails ? hide : show} onClick={() => setShowDetails(!showDetails)} />
           </span>
